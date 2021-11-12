@@ -8,6 +8,7 @@ c) Aby uzyskać informacje, które wygenerował serwer, po uruchomieniu kontener
 
 d) Aby sprawdzić ile warstw posiada zbudowany obraz użyłem polecenia ```docker history image_app1```
 
+![Screen](przeglądarka.JPG)
 ## Zad 4
 
 Mozna zbudować obraz wykorzystując bezpośrednio link do Dockerfile. Służy do tego polecenie ```docker build -t name (link do repozytorium na Github)```
