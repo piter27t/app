@@ -2,7 +2,7 @@ import express from 'express';
 import fetch from'node-fetch';
 
 const port = 8080; //nasluchiwanie na porcie 8080
-const data = new Date().toLocaleString('pl-PL'); //data uruchomienia
+const data = new Date().toLocaleString('pl-PL', {timeZone: 'Europe/Warsaw'}); //data uruchomienia
 const autor = 'Piotr Tracz'; //autor(imie i nazwisko studenta)
 
 //funkcja zwracajaca odpowiedz serwera z ktorego otrzymujemy informacje o stefie czasowej po adresie ip
@@ -27,7 +27,7 @@ app.use(async (req, res) => {
             {
                 strefa = "Europe/Warsaw";
             }
-            var dataStrefa = new Date().toLocaleString('pl-PL', strefa); //data na podstawie strefy czasowej
+            var dataStrefa = new Date().toLocaleString('pl-PL', {timeZone: strefa}); //data na podstawie strefy czasowej
             res.send(`<p>IP: ${req.ip}</p><p>Data i czas: ${dataStrefa} , strefa czasowa: ${strefa}</p>`); //wyswietlenie informacji w przegladarce
         })
         .catch((e) =>
