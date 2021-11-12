@@ -10,4 +10,6 @@ d) Aby sprawdzić ile warstw posiada zbudowany obraz użyłem polecenia ```docke
 
 ## Zad 4
 
-Mozna zbudować obraz wykorzystując bezpośrednio link do Dockerfile. Służy do tego polecenie ```docker build <link do repozytorium na Github>```
+Mozna zbudować obraz wykorzystując bezpośrednio link do Dockerfile. Służy do tego polecenie ```docker build -t name (link do repozytorium na Github)```
+
+Aby przenieść obraz na swoje konto na DockerHub należy podać następujące polecenia: ```docker tag (nazwa obrazu) (nazwa repozytorium)``` i ```docker push (nazwa repozytorium)```
